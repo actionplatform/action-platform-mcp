@@ -10,3 +10,5 @@ description: Turn the current branch into a pull request — audit git-flow, pre
 3. On approval, `open_pull_request` with the same arguments (`draft=true` when the user wants a draft). The branch is pushed first if it is not on origin yet. A pull request that already exists for the branch is returned instead of failing.
 4. Report the URL. CI runs `code-quality`, `commits`, `gitflow` and `trivy` on it.
 5. For `release`/`hotfix` branches, remind the user a second PR into `develop` follows after the first merges, and that the stable release is cut from `main` after that.
+
+Rules that always apply — git-flow, tools only, ask before it leaves the machine: see the `platform-rules` skill.

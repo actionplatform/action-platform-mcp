@@ -11,3 +11,5 @@ description: Ship the current version to the [deploy] target — preflight first
 2. `deploy` (dry run) with the `stage` the user named. Surface any error verbatim; "no provider installed" means the target's provider package is missing.
 3. On approval, `deploy` with `dry_run=false`. Report the URL.
 4. `diagnose` afterwards and report status.
+
+Rules that always apply — git-flow, tools only, ask before it leaves the machine: see the `platform-rules` skill.

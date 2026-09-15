@@ -11,3 +11,5 @@ Destructive: it changes what is live.
 2. Say the version it will return to (`to_version`, or "previous" when omitted). Wait for a yes.
 3. `rollback`. Some targets cannot roll back natively and say so — relay the instruction (usually: check out the previous tag and deploy).
 4. `diagnose` again and report.
+
+Rules that always apply — git-flow, tools only, ask before it leaves the machine: see the `platform-rules` skill.
