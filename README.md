@@ -33,10 +33,14 @@ Add to `.mcp.json`:
 
 | Path | What |
 |---|---|
-| `skills/` | 13 skills: preview first, ask before anything leaves the machine (`scaffold-project`, `install-platform`, `push-project`, `start-branch`, `open-pull-request`, `release`, `deploy`, `rollback`, `diagnose`, `add-cloud`, `add-service`, `edit-configuration`, `fix-gitflow`) |
+| `skills/` | 14 skills: `platform-rules` (git-flow always, tools only, ask before anything leaves the machine, stop on refusal) and the tasks, preview first (`scaffold-project`, `install-platform`, `push-project`, `start-branch`, `open-pull-request`, `release`, `deploy`, `rollback`, `diagnose`, `add-cloud`, `add-service`, `edit-configuration`, `fix-gitflow`) |
 | `.claude-plugin/` | Claude Code plugin and marketplace manifests |
 | `.codex-plugin/`, `.agents/plugins/` | Codex plugin and marketplace manifests |
 | `.mcp.json` | the server entry the plugins reference |
 | `.app.json` | app catalog metadata |
+
+## Rules
+
+Every skill follows [`skills/platform-rules`](skills/platform-rules/SKILL.md): git-flow always, the platform only through the tools (never its API or the code host directly), an explicit yes before anything leaves the machine, stop on refusal. The MCP server states the same rules in its instructions.
 
 Tools, prompts, local vs remote mode and permissions: [docs/use_mcp.md](https://github.com/actionplatform/action-platform/blob/master/docs/use_mcp.md) in the main repository.

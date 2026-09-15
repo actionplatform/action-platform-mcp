@@ -14,3 +14,5 @@ description: Create the remote repository for a generated project and push it â€
 5. Deploy workflows in the repo skip themselves until `AWS_DEPLOY_ROLE_ARN` (and `AMPLIFY_APP_ID` for Amplify) exist as GitHub environment secrets; point the user to `DEPLOY.md` and `requirements/` for the IAM role.
 
 Never call `push_project` in the same turn as `init_project` without an explicit yes.
+
+Rules that always apply â€” git-flow, tools only, ask before it leaves the machine: see the `platform-rules` skill.

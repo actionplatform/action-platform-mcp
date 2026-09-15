@@ -12,3 +12,5 @@ Never work directly on `main`, `master` or `develop`; the hooks refuse it anyway
 3. Slug is optional: two or three words, `start_branch` normalizes them.
 4. `start_branch`. It checks out `develop` (or the default branch when there is no develop; `main` for hotfix/release), pulls, creates and pushes. Hosted: the same tool acts on the platform's clone; `checkout_branch` switches it to an existing branch.
 5. Report branch and base. On this branch `release` cuts `X.Y.Z-rc.N` pre-releases for testing; the stable version comes after the merge into `main`. When the work is done, the open-pull-request skill closes the loop. A dirty tree or an existing name comes back as an error — relay it, do not stash or delete for the user.
+
+Rules that always apply — git-flow, tools only, ask before it leaves the machine: see the `platform-rules` skill.
