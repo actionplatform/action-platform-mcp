@@ -1,6 +1,6 @@
 {
   "name": "action-platform",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Scaffold, deploy and operate projects from templates.",
   "author": {
     "name": "Action Platform",
