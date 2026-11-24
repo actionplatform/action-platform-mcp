@@ -7,6 +7,8 @@ description: Who has access to what on the services the organization's plugins o
 
 The `access_*` tools exist on the remote server (`action-platform mcp --remote`) and need `org.manage` with an `admin`-scoped token. They cover the services whose plugin the platform bundles and whose options the organization filled in under **Plugins**; `access_audit` names them, with the resources and levels each one grants.
 
+Credentials come from the organization's connections, not from a pasted token: GitHub from the account connected under **Settings → Git**, Sentry from **Settings → Services → Connect Sentry**. Never ask anyone for a personal token. When a service fails because a connection is missing or lacks a scope or a GitHub App permission, relay the `error` as it is — it names what is missing and the link or the click that grants it — and say that an organization admin does it in the browser.
+
 1. `access_audit` — which services are there, which are imported, the drift of each (`drift`), members with no account linked, accounts that belong to no member. A service with `ok: false` carries the reason in `error`; relay it.
 2. A service not imported yet (`imported: false`) is imported by `access_sync`: it records what the service holds today and changes nothing there. Show the dry run (`apply=false`) — the proposed mapping and `note` — and ask; then `apply=true`. Accounts that are not the member's email (GitHub logins, Jenkins user ids) go in `links` (`{member email: {service: account}}`). A sync right after must answer no changes.
 3. Questions about one person or one service: `access_who` (`person` = email, or `service`).
