@@ -23,7 +23,7 @@ They hold on the local server (`action-platform mcp`) and the hosted one (`--rem
 
 ## Ask before it leaves the machine
 
-- Show what will happen and wait for an explicit yes before: `push_project`, `open_pull_request`, `release` with `dry_run=false`, `deploy` with `dry_run=false`, `rollback`, `remove_app`, `delete_project`, anything with `repository=true` / `repositories=true` (irreversible), `init_app` (creates a repository at once).
+- Show what will happen and wait for an explicit yes before: `push_project`, `open_pull_request`, `release` with `dry_run=false`, `deploy` with `dry_run=false`, `rollback`, `remove_app`, `delete_project`, anything with `repository=true` / `repositories=true` (irreversible), `init_app` (creates a repository at once), and any `access_grant`, `access_revoke`, `access_offboard` or `access_sync` with `apply=true`.
 - Dry runs first: `release`, `deploy` and `install_platform` default to them; show the result, then call again.
 - Never chain a preview and its real run in the same turn.
 

@@ -33,7 +33,7 @@ Add to `.mcp.json`:
 
 | Path | What |
 |---|---|
-| `skills/` | 14 skills: `platform-rules` (git-flow always, tools only, ask before anything leaves the machine, stop on refusal) and the tasks, preview first (`scaffold-project`, `install-platform`, `push-project`, `start-branch`, `open-pull-request`, `release`, `deploy`, `rollback`, `diagnose`, `add-cloud`, `add-service`, `edit-configuration`, `fix-gitflow`) |
+| `skills/` | 15 skills: `platform-rules` (git-flow always, tools only, ask before anything leaves the machine, stop on refusal) and the tasks, preview first (`scaffold-project`, `install-platform`, `push-project`, `start-branch`, `open-pull-request`, `release`, `deploy`, `rollback`, `diagnose`, `add-cloud`, `add-service`, `edit-configuration`, `fix-gitflow`, `manage-access`) |
 | `.claude-plugin/` | Claude Code plugin and marketplace manifests |
 | `.codex-plugin/`, `.agents/plugins/` | Codex plugin and marketplace manifests |
 | `.mcp.json` | the server entry the plugins reference |
