@@ -1,11 +1,11 @@
 ---
 name: manage-access
-description: Who has access to what on the services the organization's plugins own (code host, CI, error tracking, container host) — import first, audit the drift, then grant, revoke, offboard or sync with a dry run and an explicit yes. Remote server only.
+description: Who has access to what on the organization's services — GitHub, built into the platform, and the services its plugins own (CI, error tracking, container host) — import first, audit the drift, then grant, revoke, offboard or sync with a dry run and an explicit yes. Remote server only.
 ---
 
 # Managing access
 
-The `access_*` tools exist on the remote server (`action-platform mcp --remote`) and need `org.manage` with an `admin`-scoped token. They cover the services whose plugin the platform bundles and whose options the organization filled in under **Plugins**; `access_audit` names them, with the resources and levels each one grants.
+The `access_*` tools exist on the remote server (`action-platform mcp --remote`) and need `org.manage` with an `admin`-scoped token. They cover GitHub, which is part of the platform and reads the organization's GitHub connection, and the services whose plugin the platform bundles and whose options the organization filled in under **Plugins**; `access_audit` names them, with the resources and levels each one grants. The GitHub organization managed is the connection's default owner under **Settings → Git**.
 
 Credentials come from the organization's connections, not from a pasted token: GitHub from the account connected under **Settings → Git**, Sentry from **Settings → Services → Connect Sentry**. Never ask anyone for a personal token. When a service fails because a connection is missing or lacks a scope or a GitHub App permission, relay the `error` as it is — it names what is missing and the link or the click that grants it — and say that an organization admin does it in the browser.
 
