@@ -5,7 +5,7 @@ description: Return a deployed target to a previous version — state the versio
 
 # Rolling back
 
-Destructive: it changes what is live.
+Destructive: it changes what is live. `rollback` exists on the local server only; on a hosted platform deploy the earlier release with the deploy skill.
 
 1. `diagnose` — current status and version.
 2. Say the version it will return to (`to_version`, or "previous" when omitted). Wait for a yes.

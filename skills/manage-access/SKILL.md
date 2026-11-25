@@ -17,6 +17,7 @@ Credentials come from the organization's connections, not from a pasted token: G
    - `access_revoke` — the `note` says when a role or team still grants it; that is changed on the platform (role, team), not here.
    - `access_offboard` — every grant of every linked account; `remove_from_platform=true` also ends the membership, and is refused up front for an owner unless an owner asks, and for the last owner.
    - `access_sync` on an imported service — adds, changes and removes to close the drift; read every `remove` to the user before applying.
-5. After an apply, report each change's `status`: `applied`, `refused` (the reason — the last administrator of a service is never removed), `failed` (the service's answer).
+5. `github_branch_protection` and `github_repo_settings` read, through the same GitHub connection, each repository's default-branch protection and settings (`repo` narrows to one); they only read and need `org.manage`.
+6. After an apply, report each change's `status`: `applied`, `refused` (the reason — the last administrator of a service is never removed), `failed` (the service's answer).
 
 Rules that always apply — tools only, ask before anything changes outside the machine, stop on refusal: see the `platform-rules` skill.
